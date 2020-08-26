@@ -1,2 +1,2 @@
-# ipussy.github.io
-Pussy Github Pages
+# iPussy
+Pussy around the world

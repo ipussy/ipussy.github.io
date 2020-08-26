@@ -1,6 +1,6 @@
 # Site
 name: 'Pussy'
-description: 'I LOVE PUSSY!'
+description: 'Pussy around the world'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
@@ -39,7 +39,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Pagination
-paginate: 10
+paginate: 50
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)

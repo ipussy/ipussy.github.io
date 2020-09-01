@@ -20,10 +20,19 @@
     <a href="{{site.baseurl}}{{post.url}}">
 
         <!-- <img class="card-img"
-            src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}"
+            src="{% if post.thumb contains "://" %}{{ post.thumb }}{% else %}{{ post.thumb | absolute_url }}{% endif %}"
             alt="{{ post.title }}"> -->
+        
+        {% capture src %}
+            {% if post.thumb contains "://" %}{{ post.thumb }}{% else %}{{ post.thumb | absolute_url }}{% endif %}
+        {% endcapture %}
 
-            {% include lazyload.html image_src="{{ post.thumb | absolute_url}}" image_alt="{{ post.title }}" image_title="{{ post.title }}" %}
+        {% capture alt %}
+            {{ post.title }}
+        {% endcapture %}
+    
+        {% include lazyload.html image_src=src image_alt=alt image_title=alt %}
+
 
         <div class="notraco">
             <h2 class="card-title title">{{ post.title }}</h2>

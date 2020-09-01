@@ -7,13 +7,13 @@ layout: default
     <div class="row justify-content-center">
       <div class="col-md-8">
 
+        <div id="amzn-assoc-ad-8c6d66eb-a112-4049-8dfc-94efa9df0ced"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c6d66eb-a112-4049-8dfc-94efa9df0ced"></script>
+
         <article class="card">
 
           {% if page.image %}
         
-          <img class="card-img-top mb-2"
-            src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}"
-            alt="{{ page.title }}">
+          <img class="card-img-top mb-2" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">
           {% endif %}
 
           <div class="card-body">
@@ -35,8 +35,6 @@ layout: default
           </div>
 
         </article>
-
-        <div id="amzn-assoc-ad-8c6d66eb-a112-4049-8dfc-94efa9df0ced"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c6d66eb-a112-4049-8dfc-94efa9df0ced"></script>
 
         <div class="PageNavigation">
           {% if page.next.url %}

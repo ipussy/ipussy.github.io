@@ -172,7 +172,7 @@ def scheduleCrawler():
 
 
 
-schedule.every(6).hours.do(scheduleCrawler)
+schedule.every(2).hours.do(scheduleCrawler)
 while True:
     schedule.run_pending()
     time.sleep(60)

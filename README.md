@@ -1,2 +1,2 @@
-# iPussy
-Pussy around the world.
+# Ps
+[Ps] around the world.

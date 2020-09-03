@@ -92,7 +92,7 @@ visit: ""
 
         filename = self.filename()
         filepath = os.path.join(directory, filename)
-        with open(filepath, 'w') as postFile:
+        with open(filepath, 'w', encoding="utf8") as postFile:
             postFile.write(self.markdownText())
 
 class SubReddit(object):

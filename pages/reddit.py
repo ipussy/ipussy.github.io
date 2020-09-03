@@ -77,7 +77,7 @@ visit: ""
 {content}
 """
 
-        text = text.replace("{title}", self.title)
+        text = text.replace("{title}", self.title.replace("\"", ""))
         text = text.replace("{image}", self.sourceLink())
         text = text.replace("{thumb}", self.thumbLink())
         text = text.replace("{subreddit}", self.subReddit)

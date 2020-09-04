@@ -1,6 +1,6 @@
 # Site
 name: 'Pussy'
-description: 'Pussies around the world'
+description: 'Pussy around the world'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
@@ -10,11 +10,6 @@ email: 'pusy.studio@gmail.com'
 
 include: ["_pages"]
 permalink: /:title/
-
-# donations:
-#   paypal:
-#     text:           Donate      # Button text
-#     id:             7334HG9754  # PayPal button ID
 
 # Plugins
 plugins: 

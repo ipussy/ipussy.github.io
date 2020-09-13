@@ -6,7 +6,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def sendReportEmail(itemNumber, message):
+def sendReportEmail(subject, message):
     mailContent = message
 
     #The mail addresses and password
@@ -14,10 +14,10 @@ def sendReportEmail(itemNumber, message):
     senderPass = 'quockhai@gso'
     receiverAddress = 'quockhai.vn@gmail.com'
 
-    now = datetime.now()
-    subject = '[Ps] ' + str(itemNumber) + ' items (' + now.strftime("%Hh%M %d/%m") + ')'
-    if message.find('[404]') >= 0:
-        subject = '[Ps] 404! report at ' + now.strftime("%Hh%M %d/%m")
+    # now = datetime.now()
+    # subject = '[Ps] ' + str(itemNumber) + ' items (' + now.strftime("%Hh%M %d/%m") + ')'
+    # if message.find('[404]') >= 0:
+    #     subject = '[Ps] 404! report at ' + now.strftime("%Hh%M %d/%m")
 
     #Setup the MIME
     message = MIMEMultipart()

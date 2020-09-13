@@ -142,18 +142,33 @@ def crawlerPages():
 
 
 def scheduleCrawler():
-    crawler = crawlerPages()
-    posts = crawler[0]
-    crawlerReport = crawler[1]
+    try:
+        crawler = crawlerPages()
+        posts = crawler[0]
+        crawlerReport = crawler[1]
 
-    if len(posts) > 0:
-        createMarkdownFile(posts)
-        # savePostsInfor(posts)
-    pushToGithub()
+        if len(posts) > 0:
+            createMarkdownFile(posts)
+            # savePostsInfor(posts)
+        pushToGithub()
 
-    crawlerReport = crawlerReport + '\n\n' + 'Crawler ' + str(len(posts)) + ' posts.'
-    print(crawlerReport)
-    report.sendReportEmail(len(posts), crawlerReport)
+        crawlerReport = crawlerReport + '\n\n' + 'Crawler ' + str(len(posts)) + ' posts.'
+        
+        now = datetime.now()
+        subject = '[Ps] ' + str(len(posts)) + ' items (' + now.strftime("%Hh%M %d/%m") + ')'
+        report.sendReportEmail(subject, crawlerReport)
+    
+    except Exception as e:
+        now = datetime.now()
+        subject = '[Ps] ERROR! (' + now.strftime("%Hh%M %d/%m") + ')'
+        message = 'Ps error: ' + str(e)
+        report.sendReportEmail(subject, message)
+    
+    # finally:
+    #     now = datetime.now()
+    #     subject = '[Ps] FINISHED! (' + now.strftime("%Hh%M %d/%m") + ')'
+    #     report.sendReportEmail(subject, '')
+    
 
 
 

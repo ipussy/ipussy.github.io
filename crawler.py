@@ -97,6 +97,7 @@ def filepath():
     filepath = os.path.join(directory, filename)
     return filepath
 
+
 def savePostsInfor(posts):
     postData = {}
     postData["posts"] = []
@@ -106,10 +107,19 @@ def savePostsInfor(posts):
     with open(filepath(), 'w', encoding="utf8") as postFile:
         json.dump(postData, postFile, ensure_ascii=False, indent=4)
 
+
 def createMarkdownFile(posts):
     if len(posts) > 0:
         for post in posts:
-            post.createMarkdownFile()
+            try:
+                post.createMarkdownFile()
+
+            except Exception as e:
+                now = datetime.now()
+                subject = '[Ps] Post error (' + now.strftime("%Hh%M %d/%m") + ')'
+                message = 'Ps error: ' + str(e) + '\nPost:\n' + post.markdownText()
+                report.sendReportEmail(subject, message)
+            
 
 def pushToGithub():
     print('pushToGithub')
@@ -122,6 +132,7 @@ def pushToGithub():
     os.system(gitAdd)
     os.system(gitCommit)
     os.system(gitPush)
+
 
 def crawlerPages():
     with open('subreddits.json') as pagesFile:
@@ -160,7 +171,7 @@ def scheduleCrawler():
     
     except Exception as e:
         now = datetime.now()
-        subject = '[Ps] ERROR! (' + now.strftime("%Hh%M %d/%m") + ')'
+        subject = '[Ps] ERROR ... (' + now.strftime("%Hh%M %d/%m") + ')'
         message = 'Ps error: ' + str(e)
         report.sendReportEmail(subject, message)
     

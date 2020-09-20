@@ -152,6 +152,9 @@ def crawlerPages():
     return [news, report]
 
 
+dailyPosts = 0
+crawlerTime = 0
+
 def scheduleCrawler():
     try:
         crawler = crawlerPages()
@@ -163,11 +166,14 @@ def scheduleCrawler():
             # savePostsInfor(posts)
         pushToGithub()
 
-        crawlerReport = crawlerReport + '\n\n' + 'Crawler ' + str(len(posts)) + ' posts.'
-        
-        now = datetime.now()
-        subject = '[Ps] ' + str(len(posts)) + ' items (' + now.strftime("%Hh%M %d/%m") + ')'
-        report.sendReportEmail(subject, crawlerReport)
+        dailyPosts = dailyPosts + len(posts)
+        crawlerTime = crawlerTime + 1
+
+        if crawlerTime % 12 == 0:
+            now = datetime.now()
+            subject = '[Ps] ' + str(dailyPosts) + ' posts on ' + now.strftime("%d/%m")
+            crawlerReport = crawlerReport + '\n\n' + 'Last crawler ' + str(len(posts)) + ' posts.'
+            report.sendReportEmail(subject, crawlerReport)
     
     except Exception as e:
         now = datetime.now()

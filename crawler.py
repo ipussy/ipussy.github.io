@@ -204,10 +204,10 @@ def scheduleCrawler():
 
 
 
-schedule.every(2).hours.do(scheduleCrawler)
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+# schedule.every(2).hours.do(scheduleCrawler)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(60)
 
 
 
@@ -218,6 +218,6 @@ while True:
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 # crawlerSubreddit()

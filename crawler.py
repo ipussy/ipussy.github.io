@@ -156,6 +156,9 @@ dailyPosts = 0
 crawlerTime = 0
 
 def scheduleCrawler():
+    global dailyPosts
+    global crawlerTime
+
     try:
         crawler = crawlerPages()
         posts = crawler[0]

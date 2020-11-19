@@ -99,7 +99,6 @@ def fileDates(fileName):
 
             today = datetime.now()
             days = (today - fileDate).days
-            print(days)
             return days
     
     return -1

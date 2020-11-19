@@ -105,9 +105,13 @@ def fileDates(fileName):
 
 def moveOldPosts():
     files = os.listdir('./_posts')
+    files.sort(reverse=True)
+
     for filename in files:
         if fileDates(filename) > 15:
             shutil.move('./_posts/' + filename, './_drafts/' + filename)
+        else:
+            break
 
 
 

@@ -28,6 +28,9 @@ class Post(object):
     summary = ''
     subReddit = ''
     createdTime = 0.0
+
+    author = ''
+    authorFullname = ''
     
     # sourceImage: Image
     # resolutionImage = []
@@ -57,7 +60,18 @@ class Post(object):
         for character in self.title:
             if character.isalnum() or character == ' ':
                 name += character
-        return name.strip().replace(" ", "-") + "-" + time + ".md"
+
+        encodedString = name.encode("ascii", "ignore")
+        decodeString = encodedString.decode()
+
+        filename = decodeString.strip().replace(" ", "-")
+        if len(filename) > 225:
+            filename = filename[:225]
+
+        return filename.strip().replace(" ", "-") + "-" + time + ".md"
+
+    def createdDate(self):
+        return datetime.fromtimestamp(self.createdTime)
     
     def logInfo(self):
         print('\n- Title:', self.title)
@@ -272,6 +286,9 @@ class SubReddit(object):
             if not 'created_utc' in data:
                 return None
             createdTime = data['created_utc']
+            
+            author = data['author']
+            authorFullname = data['author_fullname']
 
             previewDict = data['preview']
 
@@ -301,7 +318,9 @@ class SubReddit(object):
             itemDict['thumbUrl'] = thumbUrl
             itemDict['thumbWidth'] = thumbWidth
             itemDict['thumbHeight'] = thumbHeight
-            
+
+            itemDict['author'] = author
+            itemDict['authorFullname'] = authorFullname
 
             # print('Title:', title, '\nLink:', url, '\nSummary:', summary)
     

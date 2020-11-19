@@ -6,6 +6,7 @@ import time
 import schedule
 import shutil
 from datetime import datetime
+from datetime import date
 
 import os
 import os.path
@@ -43,6 +44,11 @@ def isDuplicatePost(posts, post):
     for iPost in posts:
         if iPost.sourceUrl == post.sourceUrl:
             return True
+
+        if iPost.author == post.author and abs((iPost.createdDate - post.createdDate).total_seconds()) < 300:
+            print('Same author post')
+            return True
+
     return False
 
 def removeDuplicatePosts(posts):    
@@ -80,6 +86,29 @@ def savePosts(posts, filename):
         json.dump(postData, postFile, ensure_ascii=False, indent=4)
 
 
+
+
+
+def fileDates(fileName):
+    names = fileName.split('-')
+    if len(names) > 0:
+        dateStrings = names[-1].split('.')
+        if len(dateStrings) > 0:
+            dateString = dateStrings[0]
+            fileDate = datetime.strptime(dateString, '%Y%m%d%H%M%S%f')
+
+            today = datetime.now()
+            days = (today - fileDate).days
+            print(days)
+            return days
+    
+    return -1
+
+def moveOldPosts():
+    files = os.listdir('./_posts')
+    for filename in files:
+        if fileDates(filename) > 15:
+            shutil.move('./_posts/' + filename, './_drafts/' + filename)
 
 
 
@@ -167,6 +196,8 @@ def scheduleCrawler():
         if len(posts) > 0:
             createMarkdownFile(posts)
             # savePostsInfor(posts)
+        
+        moveOldPosts()
         pushToGithub()
 
         dailyPosts = dailyPosts + len(posts)
@@ -207,10 +238,10 @@ def scheduleCrawler():
 
 
 
-schedule.every(2).hours.do(scheduleCrawler)
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+# schedule.every(2).hours.do(scheduleCrawler)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(60)
 
 
 
@@ -221,6 +252,6 @@ while True:
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 # crawlerSubreddit()

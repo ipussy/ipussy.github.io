@@ -95,11 +95,12 @@ def fileDates(fileName):
         dateStrings = names[-1].split('.')
         if len(dateStrings) > 0:
             dateString = dateStrings[0]
-            fileDate = datetime.strptime(dateString, '%Y%m%d%H%M%S%f')
+            if len(dateString) > 0:
+                fileDate = datetime.strptime(dateString, '%Y%m%d%H%M%S%f')
 
-            today = datetime.now()
-            days = (today - fileDate).days
-            return days
+                today = datetime.now()
+                days = (today - fileDate).days
+                return days
     
     return -1
 
@@ -110,8 +111,7 @@ def moveOldPosts():
     for filename in files:
         if fileDates(filename) > 15:
             shutil.move('./_posts/' + filename, './_drafts/' + filename)
-        else:
-            break
+
 
 
 
@@ -258,3 +258,5 @@ while True:
 # scheduleCrawler()
 
 # crawlerSubreddit()
+
+# moveOldPosts()

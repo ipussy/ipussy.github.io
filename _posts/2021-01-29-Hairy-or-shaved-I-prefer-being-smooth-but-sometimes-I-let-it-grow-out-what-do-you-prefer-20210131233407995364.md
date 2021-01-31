@@ -1,0 +1,9 @@
+---
+title:  "Hairy or shaved? I prefer being smooth but sometimes I let it grow out, what do you prefer?"
+metadate: "hide"
+categories: [ Pussy ]
+image: "https://external-preview.redd.it/aUl5mMjNVX5WzqLVj8x9RojgtpQtR2ePc5Q-gr6cfxs.jpg?auto=webp&s=5d7aaeaaa4b9b43af36a18baffa4bc0b9e8d2996"
+thumb: "https://external-preview.redd.it/aUl5mMjNVX5WzqLVj8x9RojgtpQtR2ePc5Q-gr6cfxs.jpg?width=1080&crop=smart&auto=webp&s=116a46993e3486a9ac2899162e6d19141dc6da65"
+visit: ""
+---
+Hairy or shaved? I prefer being smooth but sometimes I let it grow out, what do you prefer?

@@ -193,6 +193,8 @@ def scheduleCrawler():
     global crawlerTime
 
     try:
+        moveOldPosts()
+
         crawler = crawlerPages()
         posts = crawler[0]
         crawlerReport = crawler[1]
@@ -201,7 +203,6 @@ def scheduleCrawler():
             createMarkdownFile(posts)
             # savePostsInfor(posts)
         
-        moveOldPosts()
         pushToGithub()
 
         dailyPosts = dailyPosts + len(posts)
@@ -256,8 +257,8 @@ def scheduleCrawler():
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 # crawlerSubreddit()
 
-moveOldPosts()
+# moveOldPosts()

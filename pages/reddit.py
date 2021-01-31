@@ -30,7 +30,7 @@ class Post(object):
     createdTime = 0.0
 
     author = ''
-    authorFullname = ''
+    # authorFullname = ''
     
     # sourceImage: Image
     # resolutionImage = []
@@ -288,7 +288,7 @@ class SubReddit(object):
             createdTime = data['created_utc']
             
             author = data['author']
-            authorFullname = data['author_fullname']
+            # authorFullname = data['author_fullname']
 
             previewDict = data['preview']
 
@@ -320,7 +320,7 @@ class SubReddit(object):
             itemDict['thumbHeight'] = thumbHeight
 
             itemDict['author'] = author
-            itemDict['authorFullname'] = authorFullname
+            # itemDict['authorFullname'] = authorFullname
 
             # print('Title:', title, '\nLink:', url, '\nSummary:', summary)
     

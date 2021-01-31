@@ -110,6 +110,7 @@ def moveOldPosts():
 
     for filename in files:
         if fileDates(filename) > 15:
+            print('Move:', filename)
             shutil.move('./_posts/' + filename, './_drafts/' + filename)
 
 
@@ -241,10 +242,10 @@ def scheduleCrawler():
 
 
 
-schedule.every(2).hours.do(scheduleCrawler)
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+# schedule.every(2).hours.do(scheduleCrawler)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(60)
 
 
 
@@ -259,4 +260,4 @@ while True:
 
 # crawlerSubreddit()
 
-# moveOldPosts()
+moveOldPosts()

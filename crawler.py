@@ -111,7 +111,9 @@ def moveOldPosts():
     for filename in files:
         if fileDates(filename) > 15:
             print('Move:', filename)
-            shutil.move('./_posts/' + filename, './_drafts/' + filename)
+            source = os.path.join('./_posts', filename)
+            dest = os.path.join('./_drafts', filename)
+            shutil.move(source, dest)
 
 
 

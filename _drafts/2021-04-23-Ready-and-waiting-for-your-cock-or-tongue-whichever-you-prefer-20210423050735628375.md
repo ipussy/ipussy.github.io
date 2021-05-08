@@ -1,0 +1,9 @@
+---
+title:  "Ready and waiting for your cock or tongue, whichever you prefer"
+metadate: "hide"
+categories: [ God Pussy ]
+image: "https://external-preview.redd.it/3JdbiNN-Ix6vqjUTXiP1fXvfxpUEKj8NYMd7u_rNan4.jpg?auto=webp&s=53f8f17de9f71d36b2cfa02383819ac99ed6fe46"
+thumb: "https://external-preview.redd.it/3JdbiNN-Ix6vqjUTXiP1fXvfxpUEKj8NYMd7u_rNan4.jpg?width=1080&crop=smart&auto=webp&s=71bad71afbc3b33340d4327847c0622940c6bffb"
+visit: ""
+---
+Ready and waiting for your cock or tongue, whichever you prefer

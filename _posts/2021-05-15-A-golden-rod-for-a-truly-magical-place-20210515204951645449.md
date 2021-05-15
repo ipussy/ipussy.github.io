@@ -1,0 +1,9 @@
+---
+title:  "A golden rod for a truly magical place"
+metadate: "hide"
+categories: [ God Pussy ]
+image: "https://external-preview.redd.it/22la25U54ZFSzU5KSQxOZRFz9uPEheD_9jSyYInBM2U.jpg?auto=webp&s=e53a873dc62c165aae72d404d7650ed1f2948ce6"
+thumb: "https://external-preview.redd.it/22la25U54ZFSzU5KSQxOZRFz9uPEheD_9jSyYInBM2U.jpg?width=1080&crop=smart&auto=webp&s=1d0c3ca28c4ab635e5ece6eee5100612f57a0af7"
+visit: ""
+---
+A golden rod for a truly magical place

@@ -1,9 +1,0 @@
----
-title:  "I behaved very badly in college today, punish me harshly 😈"
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/CTzINM6SggmJVEU8_u2oeG8_lrGmDqReMPMXx0doc50.jpg?auto=webp&s=e0be93a2a5948ba7935c77f972c3e022abfad723"
-thumb: "https://external-preview.redd.it/CTzINM6SggmJVEU8_u2oeG8_lrGmDqReMPMXx0doc50.jpg?width=640&crop=smart&auto=webp&s=654de57eead0604d41e3df5942d1826234c86208"
-visit: ""
----
-I behaved very badly in college today, punish me harshly 😈

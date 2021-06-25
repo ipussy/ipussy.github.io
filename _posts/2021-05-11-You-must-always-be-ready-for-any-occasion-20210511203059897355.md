@@ -1,9 +1,0 @@
----
-title:  "You must always be ready for any occasion 🤭"
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/CQQZVU0-FEZywQrsijKcxXaopQAzWzJTZTYoTe9rC5E.jpg?auto=webp&s=87eb251b4d34f3425d48bc8dd5acbddee081b1e6"
-thumb: "https://external-preview.redd.it/CQQZVU0-FEZywQrsijKcxXaopQAzWzJTZTYoTe9rC5E.jpg?width=1080&crop=smart&auto=webp&s=4f4c2d8e07ad1e525a2f4c5caeecf37d9c48d456"
-visit: ""
----
-You must always be ready for any occasion 🤭

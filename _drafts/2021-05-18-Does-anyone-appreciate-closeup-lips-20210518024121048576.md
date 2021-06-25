@@ -1,9 +1,0 @@
----
-title:  "Does anyone appreciate close-up lips?"
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/jQqSHYkUJBdMnMa8klvJV7FKh1Wg-35Ub0sEEbyIlTQ.jpg?auto=webp&s=5e4f354ad2643c7b8c3655291bdec78a3ce111c2"
-thumb: "https://external-preview.redd.it/jQqSHYkUJBdMnMa8klvJV7FKh1Wg-35Ub0sEEbyIlTQ.jpg?width=320&crop=smart&auto=webp&s=53205b71d03c959bf66dd743052275b2796f11fc"
-visit: ""
----
-Does anyone appreciate close-up lips?

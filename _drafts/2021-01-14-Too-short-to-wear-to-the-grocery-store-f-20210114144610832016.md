@@ -1,9 +1,0 @@
----
-title:  "Too short to wear to the grocery store? [f]"
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/yQuR5L1g42WhJK5cuuARhTh15ghyI4k11A5VNGzt3cE.jpg?auto=webp&s=dd95b58a22a4cde740cb47efd0179cb5b00d986b"
-thumb: "https://external-preview.redd.it/yQuR5L1g42WhJK5cuuARhTh15ghyI4k11A5VNGzt3cE.jpg?width=640&crop=smart&auto=webp&s=b0ff1db48850a4ba94824f2425565404f79612b3"
-visit: ""
----
-Too short to wear to the grocery store? [f]

@@ -1,9 +1,0 @@
----
-title:  "Show me how good your killstreak is and destroy me"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/DTBMd4mHgrTxadG7J23Fcv87r_gny9mQ8dZs3pgrxa0.jpg?auto=webp&s=cc7077e4164d900cb97a17fd74487fb1b4b73051"
-thumb: "https://external-preview.redd.it/DTBMd4mHgrTxadG7J23Fcv87r_gny9mQ8dZs3pgrxa0.jpg?width=1080&crop=smart&auto=webp&s=476ff6b0ef6aae960ad8764530003baa142b37d5"
-visit: ""
----
-Show me how good your killstreak is and destroy me

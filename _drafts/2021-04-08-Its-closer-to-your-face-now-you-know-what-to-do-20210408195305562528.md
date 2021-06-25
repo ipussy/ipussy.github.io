@@ -1,9 +1,0 @@
----
-title:  "It’s closer to your face now, you know what to do 😏"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/F2Z1eKgkvPBvXwfkEe08NfYkBFFNWFcOSX6Sjv8Ydq4.png?auto=webp&s=351e3b0247686f3cdadb1a5e592e7f8a86e90687"
-thumb: "https://external-preview.redd.it/F2Z1eKgkvPBvXwfkEe08NfYkBFFNWFcOSX6Sjv8Ydq4.png?width=960&crop=smart&auto=webp&s=93a2514b19bdc5684c63cdec442b98e202d139d5"
-visit: ""
----
-It’s closer to your face now, you know what to do 😏

@@ -1,9 +1,0 @@
----
-title:  "What a beautiful day to worship me. Come and spoil me. Its the only worth while investment you could ever make."
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/L2QTMtb78sNa4SrNo6UZWWjRMzvjOR8ZLjSVQYPBgZU.jpg?auto=webp&s=c6703a967a62b2fdb98d2f4a80727b27688e6f6c"
-thumb: "https://external-preview.redd.it/L2QTMtb78sNa4SrNo6UZWWjRMzvjOR8ZLjSVQYPBgZU.jpg?width=1080&crop=smart&auto=webp&s=82d3aeab0d85c8fecd42e6b5c28aa67f9db10b7a"
-visit: ""
----
-What a beautiful day to worship me. Come and spoil me. Its the only worth while investment you could ever make.

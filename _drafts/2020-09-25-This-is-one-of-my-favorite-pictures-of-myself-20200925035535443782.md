@@ -1,9 +1,0 @@
----
-title:  "This is one of my favorite pictures of myself"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/m4BSYfMe50Fmt93EFof_PM_fZBg3Y6NbQJzMRvxreIQ.jpg?auto=webp&s=a858e1e7dd2f3923b847bb5f2623fb7312febde7"
-thumb: "https://external-preview.redd.it/m4BSYfMe50Fmt93EFof_PM_fZBg3Y6NbQJzMRvxreIQ.jpg?width=320&crop=smart&auto=webp&s=259230358386d9fcae7fac9e6efd44ea0fd2f553"
-visit: ""
----
-This is one of my favorite pictures of myself

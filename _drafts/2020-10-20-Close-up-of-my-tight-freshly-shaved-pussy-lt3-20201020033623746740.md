@@ -1,9 +1,0 @@
----
-title:  "Close up of my tight freshly shaved pussy &lt;3"
-metadate: "hide"
-categories: [ Pussy ]
-image: "https://external-preview.redd.it/owMA1T1s63BmXFXPsxFiMZ2JQfBV3mA6klWCCEQoa2Y.png?auto=webp&s=e8c959f69851c0d82c0aeac0817cb465780f976e"
-thumb: "https://external-preview.redd.it/owMA1T1s63BmXFXPsxFiMZ2JQfBV3mA6klWCCEQoa2Y.png?width=320&crop=smart&auto=webp&s=c3acc39546a910913eda0f5caf5c8b657db590f7"
-visit: ""
----
-Close up of my tight freshly shaved pussy &lt;3

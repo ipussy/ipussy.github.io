@@ -1,9 +1,0 @@
----
-title:  "Took a break from studying to daydream about being creampied"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/UWb48LyX0uRJxufJegnnIs2zH5EeChJg5SZk0PZC1gc.jpg?auto=webp&s=b8f3a397f2e2f75aa75c6d0403d6a836df578401"
-thumb: "https://external-preview.redd.it/UWb48LyX0uRJxufJegnnIs2zH5EeChJg5SZk0PZC1gc.jpg?width=1080&crop=smart&auto=webp&s=37b1bc316f21cf65ec0cabe795a9b7cc344aff9e"
-visit: ""
----
-Took a break from studying to daydream about being creampied

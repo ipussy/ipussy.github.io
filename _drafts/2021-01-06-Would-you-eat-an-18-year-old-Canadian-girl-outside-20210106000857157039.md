@@ -1,9 +1,0 @@
----
-title:  "Would you eat an 18 year old Canadian girl outside?"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/DWRFyuotbi8RxUA3N9zVMGv2m8ZsC-f4ftcuICWYD6I.jpg?auto=webp&s=10917fd66b69d4c1d5b237aa36e7b82df533c85d"
-thumb: "https://external-preview.redd.it/DWRFyuotbi8RxUA3N9zVMGv2m8ZsC-f4ftcuICWYD6I.jpg?width=1080&crop=smart&auto=webp&s=6c37cf59646d4b6b528511c7b1e69abe433c03b2"
-visit: ""
----
-Would you eat an 18 year old Canadian girl outside?

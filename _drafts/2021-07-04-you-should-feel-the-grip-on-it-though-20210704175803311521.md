@@ -1,0 +1,9 @@
+---
+title:  "you should feel the grip on it though.."
+metadate: "hide"
+categories: [ God Pussy ]
+image: "https://external-preview.redd.it/D_YirE3bfJSVjjaANZU3w0G_0tXjFdMIfxicKGwEIjg.jpg?auto=webp&s=0b2bce2b73ddede9d483bb0d3804d4d025b9ab9f"
+thumb: "https://external-preview.redd.it/D_YirE3bfJSVjjaANZU3w0G_0tXjFdMIfxicKGwEIjg.jpg?width=1080&crop=smart&auto=webp&s=4deee5c28f38f1b1aa02074f83c56a2347947fad"
+visit: ""
+---
+you should feel the grip on it though..

@@ -128,7 +128,7 @@ visit: ""
 
 
 
-
+# http://www.reddit.com/r/GodPussy/new.json?limit=100&show=all
 class SubReddit(object):
     name = ''
     displayName = ''

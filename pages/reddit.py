@@ -21,6 +21,16 @@ class Image(object):
     def link(self):
         return self.url.replace("amp;", "")
 
+
+
+
+
+
+
+
+
+
+
 class Post(object):
     imageId = ''
     postId = ''
@@ -108,6 +118,16 @@ visit: ""
         filepath = os.path.join(directory, filename)
         with open(filepath, 'w', encoding="utf8") as postFile:
             postFile.write(self.markdownText())
+
+
+
+
+
+
+
+
+
+
 
 class SubReddit(object):
     name = ''

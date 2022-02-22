@@ -187,15 +187,13 @@ def crawlerPages():
     return [news, report]
 
 
-dailyPosts = 0
-crawlerTime = 0
 
 def postsCrawler():
-    global dailyPosts
-    global crawlerTime
 
     try:
-        moveOldPosts()
+        # moveOldPosts()
+
+        dailyPosts = 0
 
         crawler = crawlerPages()
         posts = crawler[0]
@@ -203,18 +201,17 @@ def postsCrawler():
 
         if len(posts) > 0:
             createMarkdownFile(posts)
-            # savePostsInfor(posts)
         
         pushToGithub()
 
-        dailyPosts = dailyPosts + len(posts)
-        crawlerTime = crawlerTime + 1
+        print(crawlerReport)
 
-        if crawlerTime % 12 == 0:
-            now = datetime.now()
-            subject = '[Ps] ' + str(dailyPosts) + ' posts on ' + now.strftime("%d/%m")
-            crawlerReport = crawlerReport + '\n\n' + 'Last crawler ' + str(len(posts)) + ' posts.'
-            report.sendReportEmail(subject, crawlerReport)
+        dailyPosts = dailyPosts + len(posts)
+        
+        now = datetime.now()
+        subject = '[Ps] ' + str(dailyPosts) + ' posts on ' + now.strftime("%d/%m")
+        crawlerReport = crawlerReport + '\n\n' + 'Last crawler ' + str(len(posts)) + ' posts.'
+        report.sendReportEmail(subject, crawlerReport)
     
     except Exception as e:
         now = datetime.now()
@@ -222,15 +219,10 @@ def postsCrawler():
         message = 'Ps error: ' + str(e)
         report.sendReportEmail(subject, message)
     
-    # finally:
-    #     now = datetime.now()
-    #     subject = '[Ps] FINISHED! (' + now.strftime("%Hh%M %d/%m") + ')'
-    #     report.sendReportEmail(subject, '')
-    
 
 
 def scheduleCrawler():
-    schedule.every().day.at("00:00").do(postsCrawler)
+    schedule.every().day.at("00:05").do(postsCrawler)
     while True:
         schedule.run_pending()
         time.sleep(60)
@@ -242,11 +234,11 @@ def scheduleCrawler():
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 # crawlerSubreddit()
 
 # moveOldPosts()
 
 
-postsCrawler()
+# postsCrawler()

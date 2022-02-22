@@ -15,8 +15,9 @@ description: "Pussies around the world."
 <section class="mt-4 mb-5">
   <div class="container-fluid">
     <div class="card-columns">
-      {% for post in paginator.posts reversed %} {% include card-post.html %} {%
-      endfor %}
+      {% for post in paginator.posts reversed %}
+      {% include card-post.html %}
+      {% endfor %}
     </div>
 
 

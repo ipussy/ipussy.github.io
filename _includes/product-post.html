@@ -1,0 +1,51 @@
+<div class="card card-pin  raco" {% unless post.image %} style="min-height:250px;background:#333;" {% endunless %}>
+
+    {% unless post.image %}
+
+    <a href="{{site.baseurl}}{{post.url}}" class="d-block p-3">
+        <h2 class="card-title title text-white mb-3">{{ post.title }}</h2>
+        <small class="d-block text-muted">{{ post.content | strip_html | truncatewords:25 }}</small>
+        <div class="more mr-2 mb-2">
+            <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
+        </div>
+    </a>
+
+    {% endunless %}
+
+    {% if post.thumb %}
+
+    <!-- {% if page.visit %}
+                    <p><a target="_blank" href="{{page.visit}}" class="btn btn-gray d-block font-weight-bold">
+                        Visit <i class="fas fa-external-link-alt"></i></a>
+                    </p>
+                    {% endif %} -->
+
+    <a target="_blank" href="{{post.visit}}" class="wrapcat">
+    </a>
+    
+    <a target="_blank" href="{{post.visit}}">
+        
+        {% capture src %}
+            {% if post.thumb contains "://" %}{{ post.thumb }}{% else %}{{ post.thumb | absolute_url }}{% endif %}
+        {% endcapture %}
+
+        {% capture alt %}
+            {{ post.title }}
+        {% endcapture %}
+    
+        {% include lazyload.html image_src=src image_alt=alt image_title=alt %}
+
+
+        <div class="notraco">
+            <h2 class="card-title title">{{ post.title }}</h2>
+            <div class="more">
+                <i class="fa fa-arrow-circle-right text-muted" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </a>
+
+    {% endif %}
+
+
+</div>

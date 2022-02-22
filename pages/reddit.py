@@ -65,7 +65,6 @@ class Post(object):
     
     def filename(self):
         name = datetime.fromtimestamp(self.createdTime).strftime("%Y-%m-%d-")
-        # name = datetime.now().strftime("%Y-%m-%d-")
         time = datetime.now().strftime("%Y%m%d%H%M%S%f")
         for character in self.title:
             if character.isalnum() or character == ' ':
@@ -75,8 +74,8 @@ class Post(object):
         decodeString = encodedString.decode()
 
         filename = decodeString.strip().replace(" ", "-")
-        if len(filename) > 225:
-            filename = filename[:225]
+        if len(filename) > 125:
+            filename = filename[:125]
 
         return filename.strip().replace(" ", "-") + "-" + time + ".md"
 
@@ -127,7 +126,7 @@ visit: ""
 
 
 
-
+# https://www.reddit.com/r/GodPussy/new.json?limit=100&show=all&raw_json=1
 # http://www.reddit.com/r/GodPussy/new.json?limit=100&show=all
 class SubReddit(object):
     name = ''
@@ -140,70 +139,135 @@ class SubReddit(object):
         self.__dict__ = json.loads(data)
     
     def requestLink(self):
-        if not self.afterKey:
-            return 'http://www.reddit.com/r/' + self.displayName + '/new.json?limit=100&show=all'
-        else:
-            return 'http://www.reddit.com/r/' + self.displayName + '/new.json?limit=100&after=' + self.afterKey
+        return 'http://www.reddit.com/r/' + self.displayName + '/new.json?limit=100&show=all&raw_json=1'
+
+        # if not self.afterKey:
+        #     return 'http://www.reddit.com/r/' + self.displayName + '/new.json?limit=100&show=all&raw_json=1'
+        # else:
+        #     return 'http://www.reddit.com/r/' + self.displayName + '/new.json?limit=100&raw_json=1&after=' + self.afterKey
 
     def loadPosts(self):
         posts = []
         
-        # backupPostId = self.backupPostId()
-        timeStamp = self.timeStamp()
+        backupDict = self.backupDict()
+
+
+        # timeStamp = self.timeStamp()
+        timeStamp = None
+        backupPostId = None
+        backupSourceUrl = None
+        backupCreatedTime = None
+
+        if backupDict != None:
+            timeStamp = backupDict['timeStamp']
+            backupPostId = backupDict['postId']
+            backupSourceUrl = backupDict['sourceUrl']
+            backupCreatedTime = backupDict['createdTime']
+
         if timeStamp != None:
             timeStr = datetime.fromtimestamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
             print('[', self.name, '] latest post at:', timeStr)
         else:
             print('[', self.name, '] posts.')
-        loopCount = 0
+
         isBackupId = False
 
-        while True:
+        jsonResponse = requests.get(self.requestLink(), headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:97.0) Gecko/20100101 Firefox/97.0'})
+        output = jsonResponse.json()
 
-            jsonResponse = requests.get(self.requestLink(), headers = {'User-agent': 'Pussy.'})
-            output = jsonResponse.json()
+        kind = output['kind']
+        if kind == 'Listing':
+            data = output['data']
 
-            kind = output['kind']
-            if kind == 'Listing':
-                data = output['data']
+            self.afterKey = data['after']
 
-                self.afterKey = data['after']
+            for dict in data['children']:
+                post = self.post(dict)
+                if post != None:
+                    # print('[', post.postId, ']')
 
-                hasBackupPost = False
-                for dict in data['children']:
-                    post = self.post(dict)
-                    if post != None:
-                        # print('[', post.postId, ']')
-
-                        if isBackupId == False:
-                            isBackupId = True
-                            self.backupPost(post)
-                        
-                        # if backupPostId != None and post.postId == backupPostId:
-                        if timeStamp != None and post.createdTime <= timeStamp:
-                            hasBackupPost = True
-
-                            # if len(posts) > 0:
-                                # self.savePosts(posts)
-                            print('\tFinished (time stamp)')
+                    if isBackupId == False:
+                        isBackupId = True
+                        self.backupPost(post)
+                    
+                    if backupPostId != None:
+                        if post.postId == backupPostId:
                             break
 
-                        posts.append(post)
-                
-                print('\tPosts [' + str(loopCount + 1) + ']: ' + str(len(posts)))
-                if hasBackupPost == True:
-                    print('\t\tMeet backup post!')
-                    break
-                
-            loopCount = loopCount + 1
+                    if backupSourceUrl != None:
+                        if post.sourceUrl == backupSourceUrl:
+                            break
 
-            if loopCount == 100:
-                # self.savePosts(posts)
-                print('\tFinished.')
-                break
-            # return posts
+                    if backupCreatedTime != None:
+                        if post.createdTime == backupCreatedTime:
+                            break
 
+                    if timeStamp != None and post.createdTime <= timeStamp:
+                        print('\tFinished (time stamp)')
+                        break
+
+                    posts.append(post)
+                
         return posts
+
+
+    # def loadPosts(self):
+    #     posts = []
+        
+    #     # backupPostId = self.backupPostId()
+    #     timeStamp = self.timeStamp()
+    #     if timeStamp != None:
+    #         timeStr = datetime.fromtimestamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
+    #         print('[', self.name, '] latest post at:', timeStr)
+    #     else:
+    #         print('[', self.name, '] posts.')
+    #     loopCount = 0
+    #     isBackupId = False
+
+    #     while True:
+
+    #         jsonResponse = requests.get(self.requestLink(), headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:97.0) Gecko/20100101 Firefox/97.0'})
+    #         output = jsonResponse.json()
+
+    #         kind = output['kind']
+    #         if kind == 'Listing':
+    #             data = output['data']
+
+    #             self.afterKey = data['after']
+
+    #             hasBackupPost = False
+    #             for dict in data['children']:
+    #                 post = self.post(dict)
+    #                 if post != None:
+    #                     # print('[', post.postId, ']')
+
+    #                     if isBackupId == False:
+    #                         isBackupId = True
+    #                         self.backupPost(post)
+                        
+    #                     # if backupPostId != None and post.postId == backupPostId:
+    #                     if timeStamp != None and post.createdTime <= timeStamp:
+    #                         hasBackupPost = True
+
+    #                         # if len(posts) > 0:
+    #                             # self.savePosts(posts)
+    #                         print('\tFinished (time stamp)')
+    #                         break
+
+    #                     posts.append(post)
+                
+    #             print('\tPosts [' + str(loopCount + 1) + ']: ' + str(len(posts)))
+    #             if hasBackupPost == True:
+    #                 print('\t\tMeet backup post!')
+    #                 break
+                
+    #         loopCount = loopCount + 1
+
+    #         if loopCount == 100:
+    #             print('\tFinished.')
+    #             break
+
+    #     return posts
 
     # def filepath(self):
     #     directory = './posts-data/'
@@ -229,6 +293,8 @@ class SubReddit(object):
         postDict['imageId'] = post.imageId
         postDict['postId'] = post.postId
         postDict['timeStamp'] = post.createdTime
+        postDict['sourceUrl'] = post.sourceUrl
+        postDict['createdTime'] = post.createdTime
 
         if path.exists('backup.json') == True:
             with open("backup.json") as backupFile:
@@ -254,6 +320,7 @@ class SubReddit(object):
             with open("backup.json", 'w') as backupFile:
                 json.dump(dict, backupFile)
     
+
     def backupPostId(self):
         if path.exists('backup.json') == True:
             with open("backup.json") as backupFile:
@@ -266,6 +333,7 @@ class SubReddit(object):
                     return subDict['postId']
         return None
 
+
     def timeStamp(self):
         if path.exists('backup.json') == True:
             with open("backup.json") as backupFile:
@@ -277,7 +345,21 @@ class SubReddit(object):
                 if subDict['subreddit'] == self.displayName:
                     return subDict['timeStamp']
         return None
+
+
+    def backupDict(self):
+        if path.exists('backup.json') == True:
+            with open("backup.json") as backupFile:
+                data = json.load(backupFile)
+
+            dict = data['subreddits']
+
+            for subDict in dict:
+                if subDict['subreddit'] == self.displayName:
+                    return subDict
+        return None
     
+
     def post(self, dict):
         kind = dict['kind']
         if kind == 't3':

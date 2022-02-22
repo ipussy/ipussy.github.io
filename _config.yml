@@ -11,6 +11,10 @@ email: 'pusy.studio@gmail.com'
 include: ["_pages"]
 permalink: /:title/
 
+collections:
+  products:
+      output: true
+
 # Plugins
 plugins: 
   - jekyll-feed
@@ -39,7 +43,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Pagination
-paginate: 50
+paginate: 20
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)

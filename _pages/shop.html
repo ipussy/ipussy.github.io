@@ -1,0 +1,44 @@
+---
+title: "Toys"
+layout: default
+permalink: "/toys.html"
+---
+
+<section class="mt-4 mb-5">
+  <div class="container-fluid">
+    {% for category in site.categories %}
+    {% if category[0] == "Product" %}
+    {% assign pages_list = category[1] %}
+    <div class="card-columns">
+      {% for post in pages_list reversed %} {% include product-post.html %} 
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+    <!-- Pagination links -->
+    <div class="row justify-content-center mt-5">
+      <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">
+          &laquo; Prev
+        </a>
+        {% else %}
+        <span class="previous">&laquo; Prev</span>
+        {% endif %}
+        <span class="page_number ">
+          {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+        {% else %}
+        <span class="next ">Next &raquo;</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+

@@ -1,0 +1,19 @@
+---
+title: "Toys"
+layout: default
+permalink: "/toys.html"
+---
+
+<section class="mt-4 mb-5">
+  <div class="container-fluid">
+    
+    <div class="card-columns">
+      {% for post in site.products %} {% include product-post.html %} 
+      {% endfor %}
+    </div>
+    
+  </div>
+
+</section>
+
+

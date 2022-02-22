@@ -190,7 +190,7 @@ def crawlerPages():
 dailyPosts = 0
 crawlerTime = 0
 
-def scheduleCrawler():
+def postsCrawler():
     global dailyPosts
     global crawlerTime
 
@@ -229,28 +229,11 @@ def scheduleCrawler():
     
 
 
-
-
-
-
-
-
-
-
-# schedule.every().day.at("15:10").do(scheduleCrawler, 'It it 15:10')
-# schedule.every(2).hours.do(scheduleCrawler)
-# schedule.every(5).minutes.do(scheduleCrawler)
-
-
-
-
-
-schedule.every(2).hours.do(scheduleCrawler)
-while True:
-    schedule.run_pending()
-    time.sleep(60)
-
-
+def scheduleCrawler():
+    schedule.every().day.at("00:00").do(postsCrawler)
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
 
 
 
@@ -264,3 +247,6 @@ while True:
 # crawlerSubreddit()
 
 # moveOldPosts()
+
+
+postsCrawler()

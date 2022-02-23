@@ -111,7 +111,7 @@ def backupPosts():
     files.sort(reverse=True)
 
     yesterday = datetime.now() - timedelta(days=1)
-    folderName = yesterday.strftime('%Y-%m-%d')
+    folderName = yesterday.strftime('%Y-%m-%d-H%M%S%f')
     
     # Zip posts
     backupFile = folderName + '.zip'

@@ -5,7 +5,8 @@ import json
 import time
 import schedule
 import shutil
-from datetime import datetime
+import zipfile
+from datetime import datetime, timedelta
 from datetime import date
 
 import os
@@ -105,24 +106,30 @@ def fileDates(fileName):
     
     return -1
 
-def moveOldPosts():
+def backupPosts():
     files = os.listdir('./_posts')
     files.sort(reverse=True)
 
-    backupFolder = os.path.join('./_posts', 'directory')
+    yesterday = datetime.now() - timedelta(days=1)
+    folderName = yesterday.strftime('%Y-%m-%d')
+    
+    # Zip posts
+    backupFile = folderName + '.zip'
+    zf = zipfile.ZipFile(os.path.join('./_drafts', backupFile), "w")
+    for file in files:
+        zf.write(os.path.join('./_posts', file))
+    zf.close()
+
+    # Move posts
+    backupFolder = os.path.join('./_posts', folderName)
     os.mkdir(backupFolder)
 
-    # for filename in files:
-    #     if fileDates(filename) > 15:
-            
-    #         source = os.path.join('./_posts', filename)
-    #         dest = os.path.join('./_drafts', filename)
-    #         shutil.move(source, dest)
-
-
-
-# def backupPosts():
-
+    for filename in files:
+        source = os.path.join('./_posts', filename)
+        shutil.move(source, backupFolder)
+    
+    # for file in files:
+    #     os.remove(os.path.join('./_posts', file))
 
 
 
@@ -196,8 +203,6 @@ def crawlerPages():
 def postsCrawler():
 
     try:
-        # moveOldPosts()
-
         dailyPosts = 0
 
         crawler = crawlerPages()
@@ -205,6 +210,7 @@ def postsCrawler():
         crawlerReport = crawler[1]
 
         if len(posts) > 0:
+            backupPosts()
             createMarkdownFile(posts)
         
         pushToGithub()
@@ -246,6 +252,6 @@ def scheduleCrawler():
 # moveOldPosts()
 
 
-# postsCrawler()
+postsCrawler()
 
-moveOldPosts()
+# backupPosts()

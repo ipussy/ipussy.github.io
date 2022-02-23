@@ -45,7 +45,8 @@ def isDuplicatePost(posts, post):
         if iPost.sourceUrl == post.sourceUrl:
             return True
 
-        if iPost.author == post.author and abs((iPost.createdDate - post.createdDate).total_seconds()) < 300:
+        # if iPost.author == post.author and abs((iPost.createdDate - post.createdDate).total_seconds()) < 300:
+        if iPost.postId == post.postId:
             print('Same author post')
             return True
 
@@ -108,15 +109,19 @@ def moveOldPosts():
     files = os.listdir('./_posts')
     files.sort(reverse=True)
 
-    for filename in files:
-        if fileDates(filename) > 15:
-            print('Move:', filename)
-            source = os.path.join('./_posts', filename)
-            dest = os.path.join('./_drafts', filename)
-            shutil.move(source, dest)
+    backupFolder = os.path.join('./_posts', 'directory')
+    os.mkdir(backupFolder)
+
+    # for filename in files:
+    #     if fileDates(filename) > 15:
+            
+    #         source = os.path.join('./_posts', filename)
+    #         dest = os.path.join('./_drafts', filename)
+    #         shutil.move(source, dest)
 
 
 
+# def backupPosts():
 
 
 
@@ -234,7 +239,7 @@ def scheduleCrawler():
 
 
 
-scheduleCrawler()
+# scheduleCrawler()
 
 # crawlerSubreddit()
 
@@ -242,3 +247,5 @@ scheduleCrawler()
 
 
 # postsCrawler()
+
+moveOldPosts()

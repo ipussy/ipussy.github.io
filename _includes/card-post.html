@@ -18,10 +18,6 @@
     </a>
     
     <a href="{{site.baseurl}}{{post.url}}">
-
-        <!-- <img class="card-img"
-            src="{% if post.thumb contains "://" %}{{ post.thumb }}{% else %}{{ post.thumb | absolute_url }}{% endif %}"
-            alt="{{ post.title }}"> -->
         
         {% capture src %}
             {% if post.thumb contains "://" %}{{ post.thumb }}{% else %}{{ post.thumb | absolute_url }}{% endif %}

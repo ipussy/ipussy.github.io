@@ -130,7 +130,9 @@ def backupPosts():
     
     # Delete posts
     for filename in files:
-        os.remove(os.path.join('./_posts', filename))
+        filePath = os.path.join('./_posts', filename)
+        if os.path.exists(filePath):
+            os.remove(filePath)
 
 
 

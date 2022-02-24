@@ -128,8 +128,9 @@ def backupPosts():
         source = os.path.join('./_posts', filename)
         shutil.move(source, backupFolder)
     
-    # for file in files:
-    #     os.remove(os.path.join('./_posts', file))
+    # Delete posts
+    for filename in files:
+        os.remove(os.path.join('./_posts', filename))
 
 
 
@@ -245,13 +246,20 @@ def scheduleCrawler():
 
 
 
-scheduleCrawler()
+# scheduleCrawler()
+
+
+postsCrawler()
+
+
+
+
+
+
+
+
+
 
 # crawlerSubreddit()
 
 # moveOldPosts()
-
-
-# postsCrawler()
-
-# backupPosts()

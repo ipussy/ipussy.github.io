@@ -149,28 +149,26 @@ class SubReddit(object):
     def loadPosts(self):
         posts = []
         
-        backupDict = self.backupDict()
+        # backupDict = self.backupDict()
+        # 
+        # timeStamp = None
+        # backupPostId = None
+        # backupSourceUrl = None
+        # backupCreatedTime = None
 
+        # if backupDict != None:
+        #     timeStamp = backupDict['timeStamp']
+        #     backupPostId = backupDict['postId']
+        #     backupSourceUrl = backupDict['sourceUrl']
+        #     backupCreatedTime = backupDict['createdTime']
 
-        # timeStamp = self.timeStamp()
-        timeStamp = None
-        backupPostId = None
-        backupSourceUrl = None
-        backupCreatedTime = None
+        # if timeStamp != None:
+        #     timeStr = datetime.fromtimestamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
+        #     print('[', self.name, '] latest post at:', timeStr)
+        # else:
+        #     print('[', self.name, '] posts.')
 
-        if backupDict != None:
-            timeStamp = backupDict['timeStamp']
-            backupPostId = backupDict['postId']
-            backupSourceUrl = backupDict['sourceUrl']
-            backupCreatedTime = backupDict['createdTime']
-
-        if timeStamp != None:
-            timeStr = datetime.fromtimestamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
-            print('[', self.name, '] latest post at:', timeStr)
-        else:
-            print('[', self.name, '] posts.')
-
-        isBackupId = False
+        # isBackupId = False
 
         jsonResponse = requests.get(self.requestLink(), headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:97.0) Gecko/20100101 Firefox/97.0'})
         output = jsonResponse.json()
@@ -185,28 +183,29 @@ class SubReddit(object):
                 post = self.post(dict)
                 if post != None:
                     # print('[', post.postId, ']')
-
-                    if isBackupId == False:
-                        isBackupId = True
-                        self.backupPost(post)
-                    
-                    if backupPostId != None:
-                        if post.postId == backupPostId:
-                            break
-
-                    if backupSourceUrl != None:
-                        if post.sourceUrl == backupSourceUrl:
-                            break
-
-                    if backupCreatedTime != None:
-                        if post.createdTime == backupCreatedTime:
-                            break
-
-                    if timeStamp != None and post.createdTime <= timeStamp:
-                        print('\tFinished (time stamp)')
-                        break
-
                     posts.append(post)
+
+                    # if isBackupId == False:
+                    #     isBackupId = True
+                    #     self.backupPost(post)
+                    
+                    # if backupPostId != None:
+                    #     if post.postId == backupPostId:
+                    #         break
+
+                    # if backupSourceUrl != None:
+                    #     if post.sourceUrl == backupSourceUrl:
+                    #         break
+
+                    # if backupCreatedTime != None:
+                    #     if post.createdTime == backupCreatedTime:
+                    #         break
+
+                    # if timeStamp != None and post.createdTime <= timeStamp:
+                    #     print('\tFinished (time stamp)')
+                    #     break
+
+                    # posts.append(post)
                 
         return posts
 

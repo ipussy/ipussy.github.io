@@ -126,7 +126,8 @@ def backupPosts():
 
     for filename in files:
         source = os.path.join('./_posts', filename)
-        shutil.move(source, backupFolder)
+        if os.path.isfile(source):
+            shutil.move(source, backupFolder)
     
     # Delete posts
     for filename in files:
@@ -248,10 +249,10 @@ def scheduleCrawler():
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 
-postsCrawler()
+# postsCrawler()
 
 
 

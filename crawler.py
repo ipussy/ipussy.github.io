@@ -132,7 +132,7 @@ def backupPosts():
     # Delete posts
     for filename in files:
         filePath = os.path.join('./_posts', filename)
-        if os.path.exists(filePath):
+        if os.path.exists(filePath) and os.path.isfile(source):
             os.remove(filePath)
 
 
@@ -249,10 +249,10 @@ def scheduleCrawler():
 
 
 
-scheduleCrawler()
+# scheduleCrawler()
 
 
-# postsCrawler()
+postsCrawler()
 
 
 

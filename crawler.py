@@ -238,6 +238,7 @@ def postsCrawler():
 
 def scheduleCrawler():
     schedule.every().day.at("00:05").do(postsCrawler)
+    # schedule.every().day.at("12:05").do(postsCrawler)
     while True:
         schedule.run_pending()
         time.sleep(60)

@@ -249,10 +249,10 @@ def scheduleCrawler():
 
 
 
-# scheduleCrawler()
+scheduleCrawler()
 
 
-postsCrawler()
+# postsCrawler()
 
 
 

@@ -177,9 +177,12 @@ def pushToGithub():
     # gitStatus = os.system('git status')
     
     message = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    gitPull = 'git pull'
     gitAdd = 'git add .'
     gitCommit = 'git commit -m ' + '\"' + message + '\"'
     gitPush = 'git push -u origin master'
+    
+    os.system(gitPull)
     os.system(gitAdd)
     os.system(gitCommit)
     os.system(gitPush)

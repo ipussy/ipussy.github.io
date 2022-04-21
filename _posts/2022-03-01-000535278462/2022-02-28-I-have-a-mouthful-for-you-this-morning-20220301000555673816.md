@@ -1,9 +1,0 @@
----
-title:  "I have a mouthful for you this morning ;)"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/kHjEpWZ2ApnT4iuwq9ikCKeC3F5IDNdbNeReU1CBxks.jpg?auto=webp&s=6a0ea777625151c78139e55b3a247d08566deced"
-thumb: "https://external-preview.redd.it/kHjEpWZ2ApnT4iuwq9ikCKeC3F5IDNdbNeReU1CBxks.jpg?width=216&crop=smart&auto=webp&s=96aee6766e8418f2398cf677602e23c5d6698ff0"
-visit: ""
----
-I have a mouthful for you this morning ;)

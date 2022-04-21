@@ -1,9 +1,0 @@
----
-title:  "Would you eat out a nerdy looking girl?"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/dINWf3almRsuG98NNe34ZcTkX97Fy1v1GpQmGE7OzRk.jpg?auto=webp&s=c83c018479eebc18ea20ac303e04ef2f3873e715"
-thumb: "https://external-preview.redd.it/dINWf3almRsuG98NNe34ZcTkX97Fy1v1GpQmGE7OzRk.jpg?width=216&crop=smart&auto=webp&s=0d73ff645f8c8cf0c7590a2a1989b4f5b27d8229"
-visit: ""
----
-Would you eat out a nerdy looking girl?

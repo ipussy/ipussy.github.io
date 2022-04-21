@@ -1,9 +1,0 @@
----
-title:  "I taste like strawberries. Don’t believe me? Come find out for yourself"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/kDm6ZEg4jnPTwyxaedCQCO_a8Izso9G1yJLoKOsyvZU.jpg?auto=webp&s=625436bd586e8f03df26f6b17819d7c264957c9e"
-thumb: "https://external-preview.redd.it/kDm6ZEg4jnPTwyxaedCQCO_a8Izso9G1yJLoKOsyvZU.jpg?width=216&crop=smart&auto=webp&s=a9a92b0a2463052a3894a1ecbe0507db20a527f1"
-visit: ""
----
-I taste like strawberries. Don’t believe me? Come find out for yourself

@@ -1,9 +1,0 @@
----
-title:  "Will you accept my open invitation?"
-metadate: "hide"
-categories: [ God Pussy ]
-image: "https://external-preview.redd.it/9wYCHnsIgNcH_-M5SToHIeUKvD81LiePGs-9yd_9YSA.png?auto=webp&s=a28f0109ca79251b7b1b83f3edf8979c7198b89a"
-thumb: "https://external-preview.redd.it/9wYCHnsIgNcH_-M5SToHIeUKvD81LiePGs-9yd_9YSA.png?width=1080&crop=smart&auto=webp&s=744e4d513889db7edf32dd75b15da4fafe196f61"
-visit: ""
----
-Will you accept my open invitation?
